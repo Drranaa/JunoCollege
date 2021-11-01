@@ -2,6 +2,8 @@
 
 https://docs.google.com/spreadsheets/d/1x-uvfjh-6T0V1qPvSn7pXbKCoBJfHqx4gVZU3V2J_Cs/edit?usp=sharing
 
+----
+
 The data query exported allows us to see the; players_id, latest_match, joined_date, retention_day, age, total_spending.
 
 With that data, I was able to create a new column in sheets (retention_day), where I was able to do =B2-C2. With that data, I was able to get a column where it details how many days played per player.
