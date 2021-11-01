@@ -38,6 +38,8 @@ But at looking at the total sum, we see that the not retained spend less in tota
 
 As we can see, retained on average spend less, but in total spent more.
 
+!['description'](6.png)
+
 **DO PLAYERS WITH 30 DAY RETENTION COME FROM A SPECIFIC REGION**
 
 If you take a look at SPENDING PER LOCATION, I also have an analysis of who spends the most per location on the maps added. Each map represents average total spending per location, one map is for not retained while the other is for retained.
@@ -53,8 +55,9 @@ With this data, we can analyze and see which location needs better promotions an
 
 I also made another sheets titled AGE to analyze the age range of who plays the mosts. With this data we can change the game style or game type to attract a certain age as well. We can see that the average is 18-22 years old.
 
+!['description'](5.png)
 
-
+----
 With this data you get a good visualization of who played on what day, who stayed to play after 30 days, how much they spent, where they are located and what age range they are from. We are able to use this data to change the game to either retain players or get them to spend more.
 
  
