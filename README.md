@@ -16,11 +16,15 @@ Some of the questions we were able to answer with this date: The day in question
 
 Sheets page TOTAL PLAYED has a pivot table to total sum, not retained, and retained count of each day. We can see how many players joined on each day for each specific category. I also added TOTAL PLAYERS counta on the line chart, because I wanted to see the busiest day that a lot of people joined. (75th day of the year [175 players] which happens to be March 14, and 290th day of the year which happens to me September 4 [180 players]. Fun fact, both days match up to march break or labour day long weekend. 
 
+!['description'](1.png)
+
 **2. OF THE PLAYERS WHO JOINED, HOW MANY WERE RETAINED**
 
 Sheets page TOTAL PLAYED has the grand total of each; total players, retained players, and not retained players. We can see a fraction of players are retained vs the un retained. 
 
 With the previous questions answered, we can go in depth to analyze the spending and location metrics as well.
+
+!['description'](2.png)!['description'](3.png)
 
 ----
 
@@ -30,7 +34,7 @@ If you head over to sheets page SPENDING PER LOCATION I have broken down the cha
 
 We can see that the not retained on average spend more than the retained. 
 
-But at looking at the total su,, we see that the not retained spend less in total. Which is a cool analysis when you relate it back to the total played category, the retained players are a fraction of the non retained.
+But at looking at the total sum, we see that the not retained spend less in total. Which is a cool analysis when you relate it back to the total played category, the retained players are a fraction of the non retained.
 
 As we can see, retained on average spend less, but in total spent more.
 
@@ -42,6 +46,7 @@ From the first map1, we can see the not retained is most spent in Asia, while in
 
 With this data, we can analyze and see which location needs better promotions and in what region to get more people to purchase things through the online store.
 
+!['description'](4.png)
 ----
 
 **EXTRA ANALYSIS**
