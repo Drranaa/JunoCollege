@@ -1,0 +1,87 @@
+30 DAY ANALYSIS, Player Retention, AUDRANA ESHO
+https://docs.google.com/spreadsheets/d/1x-uvfjh-6T0V1qPvSn7pXbKCoBJfHqx4gVZU3V2J_Cs/edit?usp=sharing
+
+
+COMBINED MATCHES_INFO + PLAYER_INFO, 
+	Made a BQ called ‘MATCHES INFO AND PLAYER INFO’
+
+SELECT
+    p.player_id,
+    p.location,
+    p.age,
+    p.joined as joined_date,
+    m.day as play_date
+FROM
+    `esho-329700.sql.matches_info` m
+JOIN 
+    `esho-329700.sql.player_info` p
+ON
+    p.player_id = m.player_id
+GROUP BY 
+    p.player_id,
+    p.location,
+    p.age,
+    p.joined,
+    m.day
+
+
+COMBINED ITEM_INFO + PURCHASE INFO
+		Made a BQ called ‘ITEM INFO and PURCHASE INFO’ ITEM INFO,
+
+SELECT 
+    SUM(price) as Total_Spending,
+    p.player_id
+FROM
+    `esho-329700.sql.item_info` i
+JOIN 
+    `esho-329700.sql.purchase_info` p
+ON 
+    i.item_id = p.item_id
+GROUP BY 
+    p.player_id
+
+COMBINED MATCHES INFO PLAYER INFO + ITEM INFO PURCHASE INFO
+		Made a BQ called ‘PURCHASE INFO, MATCHES INFO, AND PLAYER INFO
+
+SELECT
+    m.player_id,
+    m.location,
+    m.age,
+    i.total_spending,
+    m.joined_date,
+    m.play_date
+FROM
+  `esho-329700.sql.MATCHES INFO and PLAYER INFO` m
+JOIN 
+  `esho-329700.sql.ITEM INFO and PURCHASE INFO` i
+ON
+    m.player_id = i.player_id
+GROUP BY 
+    m.player_id,
+    m.location,
+    m.age,
+    m.joined_date,
+    i.total_spending,
+    m.play_date
+
+REMOVED THE DUPES BY USING MAX DAY, NARROWED DOWN THE SEARCH TO 44k
+	MADE A NEW CHART OUT OF THAT, EXPORTED TO EXCEL
+SELECT 
+    player_id,
+    MAX (play_date) as latest_match,
+    joined_date,
+    location,
+    age,
+    total_spending
+ FROM `esho-329700.sql.ITEM INFO_PURCHASE INFO_MATCHES INFO_PLAYER INFO`
+ GROUP BY  
+    player_id,
+    joined_date,
+    location,
+    age,
+    total_spending
+ORDER BY 
+    player_id asc 
+
+
+
